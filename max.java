@@ -1,18 +1,56 @@
-import java.util.*;
-class Solution{
-	public static int min(int res, int a){
-		return res > a ? a : res;
-	}
-}
+import java.util.Scanner;
 class Main{
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int[] arr = new int[]{80, 20, 30, 40, 510};
-		int res = Integer.MAX_VALUE;
-		Solution sl = new Solution();
-		for(int a : arr){
-			res = sl.min(res, a);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int[][] mat = new int[n][m];
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < m; j++){
+				arr[i][j] = mat;
+			}
 		}
-		System.out.println(res);
+		// for(int[] row : arr){
+		// 	int max = Integer.MIN_VALUE;
+		// 	for(int value : row){
+		// 		max = Math.max(max, value);
+		// 	}
+		// 	System.out.println(max);
+		// }
+
+		// for(int i = 0; i < arr.length; i++){
+		// 	int ans = Integer.MIN_VALUE;
+		// 	for(int j = 0; j < arr[0].length; j++){
+		// 		ans = Math.max(ans, arr[i][j]);
+		// 	}
+		// 	System.out.println(ans);;
+		// }
+
+		// int ans = Integer.MIN_VALUE;
+		// for(int i = 0; i < arr.length; i++){
+		// 	ans = Integer.MIN_VALUE;
+		// 	for(int j = 0; j < arr[0].length; j++){
+		// 		ans = Math.max(ans, arr[i][j]);
+		// 	}
+		// 	System.out.println(ans);;
+		// }
+
+
+		int ans = Integer.MIN_VALUE;
+		for(int i = 0; i < arr.length; i++){
+			ans = Integer.MIN_VALUE;
+			for(int j = 0; j < arr[0].length; j++){
+				if(ans < arr[i][j])ans = arr[i][j];
+			}
+			System.out.println(ans);;
+		}
+
+		for(int i = 0; i < arr.length; i++){
+			int ans = Integer.MIN_VALUE;
+			for(int j = 0; j < arr[0].length; j++){
+				if(ans < arr[i][j])ans = arr[i][j];
+			}
+			System.out.println(ans);;
+		}
 	}
 }
